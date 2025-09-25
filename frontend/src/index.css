@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/theme.css';
+
+/* تنظیم جهت سایت به راست به چپ */
+html {
+  direction: rtl;
+}
+body {
+  text-align: right;
+}

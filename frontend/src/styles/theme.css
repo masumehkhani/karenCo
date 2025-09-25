@@ -1,0 +1,226 @@
+/* theme.css */
+
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-ExtraLight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/src/assets/fonts/woff2/PeydaWebFaNum-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+@theme {
+
+  /* رنگ‌های اصلی */
+  --color-primary: #CC0000;   /* TI Red */
+  --color-primary-dark: #990000;
+  --color-primary-light: #FF3333;
+
+  /* رنگ‌های خنثی */
+  --color-black: #000000;
+  --color-gray-dark: #555555;
+  --color-gray: #888888;
+  --color-gray-light: #DDDDDD;
+  --color-white: #FFFFFF;
+  --font-sans: 'Peyda', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* حذف ضربدر پیش‌فرض مرورگر */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+input[type="search"]::-moz-search-clear {
+  display: none;
+}
+
+/* بولت غیرفعال */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: white !important;
+  opacity: 0.7;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+/* برای دایره‌های معمولی */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: white !important;
+  opacity: 0.8 !important;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+
+.swiper-pagination-bullet-active {
+  background-color: #cc0000 !important;
+  opacity: 1 !important;
+}
+
+/* موقعیت در موبایل - ببریم سمت چپ تصویر */
+@media (max-width: 768px) {
+  .custom-swiper .swiper-pagination {
+    right: auto !important;
+    top: 50%;
+    /* left: 20px !important;
+    bottom: 50% !important; */
+    text-align: left !important;
+  }
+}
+
+/* استایل دهی به نویگیشن در هرواسلایدر */
+/* فلش‌های Swiper: ظاهر کلی */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  padding: 6px; /* سایز فلش‌ها */
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+/* حالت موبایل */
+@media (max-width: 768px) {
+  /* فلش‌ها و pagination را در یک تراز افقی قرار می‌دهیم */
+  .swiper-button-next,
+  .swiper-button-prev
+  {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  .swiper-pagination{
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 0.6rem;
+  }
+}
+/* سایز آیکون فلش‌ها */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.6rem !important; /* فلش کوچیک‌تر بشه */
+  font-weight: bold !important;
+}
+
+/* موقعیت‌دهی در دسکتاپ */
+.swiper-button-next {
+  left: 24px !important;
+}
+.swiper-button-prev {
+  right: 24px !important;
+}
+
+/* حالت موبایل */
+@media (max-width: 768px) {
+  /* مخفی‌سازی فلش قبلی */
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  /* موقعیت فلش بعدی کنار pagination */
+  .swiper-button-prev {
+    font-size: 1rem !important;
+    left: 120px !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 50% !important;
+    transform: translateY(35%);
+  }
+
+  /* جا‌به‌جایی pagination به سمت چپ */
+  .custom-swiper .swiper-pagination {
+    right: auto !important;
+    left: 20px !important;
+    bottom: 50% !important;
+    text-align: left !important;
+  }
+}
+
+.products-swiper .swiper-button-next::after,
+.products-swiper .swiper-button-prev::after{
+  color: #555;
+  font-weight: 900;
+  font-size: 20px;
+  position: absolute;
+}
+.products-swiper .swiper-button-next::after{
+  right: 38px;
+}
+.products-swiper .swiper-button-prev::after{
+  left: 38px;
+}
+
+
+@media (max-width: 768px) {
+  /* مخفی‌سازی فلش قبلی */
+  products-swiper .swiper-button-next,
+  .products-swiper .swiper-button-prev
+   {
+    display: none !important;
+  }
+}
+
+
+body {
+  font-family: "Peyda", sans-serif;
+}
