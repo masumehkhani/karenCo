@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="px-8 md:px-32 py-16">
-        <ProductsCarousel />
+        <ProductsCarousel id="1" name="Car" drive="FWD" power={100}/>
       </div>
 
       <PassionSection />

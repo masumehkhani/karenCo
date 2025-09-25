@@ -1,7 +1,7 @@
 import { IoReturnUpBack } from "react-icons/io5";
 import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
-import Password from "../auth/password";
+import Password from "../auth/Password";
 import { Link } from "react-router-dom";
 
 interface FormValues {
